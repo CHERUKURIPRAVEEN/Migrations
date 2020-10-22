@@ -1,0 +1,24 @@
+Github To CodeCommit Migration Steps
+Prerequisites:
+Github Credentials and Repo Details.
+AWS Code Commit Full Access (For Creating Repos).
+Step 1:
+Clone the Bit bucket repos into our local server or machine
+git clone --mirror "repo name"
+Step 2:
+After that login into the AWS console.
+Go to the code commit service.
+And create repo.
+
+After creating the repo come back to the local server.
+Step 3:
+Go the that folder(repo folder).
+And run the bellow commands.
+git push --mirror < destination >
+OR
+git push <repo url> --all
+This command will push the all repo to the AWS code commit repo including branches.
+git push <repo url> --tags
+This command will push the all repo tags.
+Once run this command you come back to the aws console.
+Note: When you hits the above command its asking Git Code Commit Credential
